@@ -1,0 +1,136 @@
+/*Style*/
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    /*for display*/
+}
+
+body {
+    /*background: color img rep att posi/sz*/
+    background: url(imgs/showtimes_bg.jpg) no-repeat fixed center/cover;
+    font-family: "나눔명조", "SF Display";
+    color: aliceblue;
+    /*
+    background-color: aliceblue;
+    background-image: url(imgs/bg_mainvisual.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: x y;
+    background-size: x (y) or cover;
+    */
+    overflow-y: scroll;
+}
+
+/*h1 class tilteImg*/
+h1.titleImg {
+    text-align: center;
+    margin: 60px auto;
+    /*margin-top: 100px;*/
+    padding: 20px;
+    /* top(all, top-bottom) right(r-l) bottom left */
+}
+
+.titleImg > img {
+    width: 400px;
+}
+
+/*context box id context*/
+#context{
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    /* outline: 1px solid blue; */
+    /*outline(unfixed) & boeder(fixed): bold kinds color*/
+    /*top-bottom: 0, r-l: auto*/
+    z-index: 9;
+}
+
+/*character box all*/
+#context > div {
+    width: 16%;
+    margin: 0 .3%;
+    /*outline: 1px dashed red;*/
+    float: left;
+    /*overflow: hidden;*/
+}
+
+#context > div:hover {
+    margin-top: -13%;
+    transition: margin-top .6s ease-out;
+}
+
+/*character img all*/
+#context > div > img {
+    width: 100%;
+
+}
+
+/*character name box*/
+.nameBox {
+    position: relative;
+    bottom: 1em;
+    text-align: center;
+    background-color: darkgreen;
+    line-height: 56px;
+    /*margin value is integer*/
+}
+
+#context > div:hover .nameBox {
+    color: darkgray;
+}
+
+/*discriptBox*/
+.discriptBox {
+    position: relative;
+    bottom: 2em;
+    font-size: 16px;
+    /*nomal size 16px or 12 pt*/
+    line-height: 21px;
+    /*string height*/
+    height: 0;
+    overflow: hidden;
+    /*
+    hidden child - hight:0 & overflow:hidden
+    */
+}
+
+/*discript box shows if hover on character box whit visual*/
+/*pseudo class ex)hover*/
+
+#context > div:hover .discriptBox {
+    height: 530px;
+    background-color: darkgreen;
+
+    /*transition is that we known
+    transition elements time ease(linear, ease-in, ease-out, ease-in-out) delay */
+
+    transition: height .6s ease-out;
+}
+
+/*discript heding*/
+.discriptBox > h3 {
+    font-size: 18px;
+    padding: 0 0;
+    text-align: center;
+}
+
+.discriptBox > ul {
+    padding: 0 15px;
+    list-style: none;
+    text-align: center;
+}
+
+.discriptBox > dl {
+    padding: 0 15px;
+    list-style: none;
+}
+
+
+#contextBottom {
+    margin: 30px auto;
+    width: 90%;
+    /* outline: 1px solid blue; */
+}
